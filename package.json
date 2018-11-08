@@ -7,5 +7,10 @@
     "url": "git+https://github.com/nickveys/woodcliff-homebridge.git"
   },
   "author": "Nick Veys",
-  "license": "0BSD"
+  "license": "0BSD",
+  "dependencies": {
+    "homebridge": "^0.4.45",
+    "homebridge-camera-ffmpeg": "^0.1.8",
+    "homebridge-dht": "^0.1.22"
+  }
 }

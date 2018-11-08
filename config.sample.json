@@ -14,6 +14,21 @@
       "name": "Homebridge Info Server",
       "updateFrequency": 10000,
       "updateCheckFrequency": 86400
+    },
+    {
+      "platform": "Camera-ffmpeg",
+      "cameras": [
+        {
+          "name": "Bunny",
+          "videoConfig": {
+            "source": "-re -i rtsp://184.72.239.149/vod/mp4:BigBuckBunny_175k.mov",
+            "maxStreams": 2,
+            "maxWidth": 1280,
+            "maxHeight": 720,
+            "maxFPS": 30
+          }
+        }
+      ]
     }
   ]
 }

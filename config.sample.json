@@ -6,8 +6,14 @@
     "pin": "ZZZ-ZZ-ZZZ"
   },
   "description": "Homebridge configuration for Woodcliff",
-  "accessories": [
-  ],
+  "accessories": [],
   "platforms": [
+    {
+      "platform": "Info",
+      "port": 9876,
+      "name": "Homebridge Info Server",
+      "updateFrequency": 10000,
+      "updateCheckFrequency": 86400
+    }
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "name": "woodcliff-homebridge.git",
+  "version": "1.0.0",
+  "description": "HomeBridge Devices @ Cabin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickveys/woodcliff-homebridge.git"
+  },
+  "author": "Nick Veys",
+  "license": "0BSD"
+}

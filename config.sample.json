@@ -1,0 +1,13 @@
+{
+  "bridge": {
+    "name": "Homebridge",
+    "username": "XX:XX:XX:XX:XX:XX",
+    "port": 51826,
+    "pin": "ZZZ-ZZ-ZZZ"
+  },
+  "description": "Homebridge configuration for Woodcliff",
+  "accessories": [
+  ],
+  "platforms": [
+  ]
+}

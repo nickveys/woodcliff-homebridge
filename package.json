@@ -11,6 +11,6 @@
   "dependencies": {
     "homebridge": "^0.4.45",
     "homebridge-camera-ffmpeg": "^0.1.8",
-    "homebridge-dht-rpi": "^0.0.1"
+    "homebridge-dht-rpi": "^0.0.2"
   }
 }

@@ -3,16 +3,18 @@
 ## Setup
 
 * Install [Raspbian OS Image][raspbian-downloads]
+* [Enable WiFi][raspbian-wifi] via `raspi-config`
 * [Enable SSHd][raspbian-ssh] via `raspi-config`
 * Install needed apt utilities/dependencies
   ```
-  sudo apt-get install -y \
+  sudo apt install -y \
     git \
     dirmngr \
     vim \
-    pigpio python-pigpio python3-pigpio
+    ffmpeg \
+    tmux
   ```
-* Install asdf
+* Install [asdf][asdf-vm]
   ```
   $ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.6.0
   $ echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
@@ -30,7 +32,22 @@
   ```
 * Install Node.js for the project
   ```
-  $ cd woodcliff-homebridge && asdf install
+  $ cd ~/woodcliff-homebridge && asdf install
+  ```
+* Install [BCM2835 library][bcm2835-lib]
+  ```
+  $ cd
+  $ wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.57.tar.gz # or latest
+  $ tar zxf bcm2835-1.57.tar.gz # or latest
+  $ cd bcm2835-*
+  $ ./configure
+  $ make
+  $ sudo make install
+  ```
+* Install NPM dependencies
+  ```
+  $ cd ~/woodcliff-homebridge
+  $ npm install
   ```
 * Copy `config.sample.json` to `~/.homebridge/config.json`
 * Update `username` and `pin` to actual values
@@ -39,5 +56,8 @@
 
 Running on boot: https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
 
+[asdf-vm]: https://github.com/asdf-vm/asdf
+[bcm2835-lib]: http://www.airspayce.com/mikem/bcm2835
 [raspbian-downloads]: https://www.raspberrypi.org/downloads
 [raspbian-ssh]: https://www.raspberrypi.org/documentation/remote-access/ssh
+[raspbian-wifi]: https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
